@@ -3,5 +3,6 @@ steps:
   args: [ 'build', '-t', 'gcr.io/$PROJECT_ID/quickstart-image', '.' ]
 images:
 - 'gcr.io/$PROJECT_ID/quickstart-image'
+ logsBucket: '${_LOGS_BUCKET_NAME}'
 options:
- Logging: CLOUD_LOGGING_ONLY
+  logging: GCS_ONLY
